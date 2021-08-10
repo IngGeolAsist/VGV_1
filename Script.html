@@ -105,19 +105,6 @@
       		layer.bindPopup( "<strong>" + "Estación:" + "</strong><br/>"+ feature.properties.Name)
    		}
 		}).addTo(map);
-	 
-		//Sketchfab
-		var sketchfab = L.geoJson(sketchfab, {
-		style:function(feature){
-		switch (feature.properties.Name){
-			case 1: return {color:'#ff0303'};
-			case 2: return {color:'#996202'};		
-		}
-		},
-		onEachFeature: function( feature, layer ){
-      		layer.bindPopup( "<strong>" + "Modelo 3D:" + "</strong><br/>"+ feature.properties.Name)
-   		}
-		}).addTo(map);
 
  </script>
 </body>
