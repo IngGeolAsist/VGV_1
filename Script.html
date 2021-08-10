@@ -25,9 +25,6 @@
 		center:[19.1108344, -99.1007876],
 		zoom:11
 		});
-		
-	  	var sitio = L.geoJson(Sitios, {
-		}).addTo(map);
 	 
 		var scale = L.control.scale({
 		'imperial':false
@@ -49,13 +46,20 @@
 		var sat = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
 		attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 		});
-		
+
 		var basemaps = {
 			"OpenStreetMap": osm,
 			"Topografía": topo,										
 			"Satélite": sat
 			};
 		L.control.layers(basemaps).addTo(map);
+
+	 	var sitio = L.geoJson(Sitios,{
+		style: contact_style,
+		onEachFeature: function( feature, layer ){
+  		layer.bindPopup( "carreteras")}
+		}).addTo (map);
+
  </script>
 </body>
 </html>
