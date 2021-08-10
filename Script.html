@@ -56,10 +56,10 @@
 			};
 		L.control.layers(basemaps).addTo(map);
 
-	 	var sitios = L.geoJson(Sitios,{
+	 	var Tracks = L.geoJson(Tracks,{
 		style: contact_style,
 		onEachFeature: function( feature, layer ){
-  		layer.bindPopup( "carreteras")}
+  		layer.bindPopup( "Tracks")}
 		}).addTo (map);
 
  </script>
