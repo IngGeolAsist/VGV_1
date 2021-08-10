@@ -54,11 +54,11 @@
 			};
 		L.control.layers(basemaps).addTo(map);
 
-	 	//var sitio = L.geoJson(Sitios,{
-		//style: contact_style,
-		//onEachFeature: function( feature, layer ){
-  		//layer.bindPopup( "carreteras")}
-		//}).addTo (map);
+	 	var sitios = L.geoJson(Sitios,{
+		style: contact_style,
+		onEachFeature: function( feature, layer ){
+  		layer.bindPopup( "carreteras")}
+		}).addTo (map);
 
  </script>
 </body>
