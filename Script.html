@@ -112,6 +112,18 @@
    		}
 		}).addTo(map);
 
+	 	//Sketchfab
+	 	var sketchfab = L.geoJson(sketchfab, {
+		style:function(feature){
+		switch (feature.properties.Name){
+			case 'La Bomba': return {color:'#ff0303'};
+		}
+		},
+		onEachFeature: function( feature, layer ){
+      		layer.bindPopup( "<strong>" + "Modelo 3D:" + "</strong><br/>"+ feature.properties.Name)
+   		}
+		}).addTo(map);
+
  </script>
 </body>
 </html>
