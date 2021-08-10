@@ -11,6 +11,8 @@
 	<script type="text/javascript" src="litologias.js"></script>
 	<script type="text/javascript" src="sitios.js"></script>
 	<script type="text/javascript" src="trayectos.js"></script>
+	<script type="text/javascript" src="logo_rojo.png"></script>
+	<script type="text/javascript" src="logo_verde.png"></script>
   <style>
 	#mapDIV {
 	height: 100%;
@@ -95,8 +97,8 @@
 		var sitios = L.geoJson(sitios, {
 		style:function(feature){
 		switch (feature.properties.select){
-			case 1: return {color:'#ff0303'};
-			case 2: return {color:'#ff0303'};		
+			case 1: return {iconUrl: 'logo_rojo.png'};
+			case 2: return {iconUrl: 'logo_verde.png'};		
 		}
 		},
 		onEachFeature: function( feature, layer ){
