@@ -61,11 +61,11 @@
 	 	var litologias = L.geoJson(litologias, {
 		style:function(feature){
 		switch (feature.properties.Nombre){
-			case 'Flujos de Lava de El Pelado': return {color:'#fff714', fillOpacity: .5};
-			case 'Flujos de lava de Chichinautzin': return {color:'#9fd4d3', fillOpacity: .5};			
-			case 'Flujos de lava de Guespala': return {color:'#f5b3dd', fillOpacity: .5};
-			case 'Formación Tepoztlán': return {color:'#996202', fillOpacity: .5};
-			case 'Formación Morelos': return {color:'#049902', fillOpacity: .5};
+			case 'Flujos de Lava de El Pelado': return {color:'#fff714', "weight": 0, fillOpacity: .5};
+			case 'Flujos de lava de Chichinautzin': return {color:'#9fd4d3', "weight": 0, fillOpacity: .5};			
+			case 'Flujos de lava de Guespala': return {color:'#f5b3dd', "weight": 0, fillOpacity: .5};
+			case 'Formación Tepoztlán': return {color:'#996202', "weight": 0, fillOpacity: .5};
+			case 'Formación Morelos': return {color:'#049902', "weight": 0, fillOpacity: .5};
 		}
 		},
 		onEachFeature: function( feature, layer ){
