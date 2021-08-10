@@ -57,7 +57,23 @@
 		L.control.layers(basemaps).addTo(map);
 
 	 	//Capas GeoJSON
-		//Trayectos
+	  	//Geología
+	 	var litologias = L.geoJson(litologias, {
+		style:function(feature){
+		switch (feature.properties.Nombre){
+			case 'Flujos de Lava de El Pelado': return {color:'#fff714', fillOpacity: .5};
+			case 'Flujos de lava de Chichinautzin': return {color:'#9fd4d3', fillOpacity: .5};			
+			case 'Flujos de lava de Guespala': return {color:'#f5b3dd', fillOpacity: .5};
+			case 'Formación Tepoztlán': return {color:'#996202', fillOpacity: .5};
+			case 'Formación Morelos': return {color:'#049902', fillOpacity: .5};
+		}
+		},
+		onEachFeature: function( feature, layer ){
+      		layer.bindPopup( "<strong>" + "Litología:" + "</strong><br/>"+ feature.properties.Nombre)
+   		}
+		}).addTo(map);
+
+	 	//Trayectos
 	 	var trayectos = L.geoJson(trayectos, {
 		style:function(feature){
 		switch (feature.properties.Name){
@@ -85,22 +101,6 @@
 		},
 		onEachFeature: function( feature, layer ){
       		layer.bindPopup( "<strong>" + "Estación:" + "</strong><br/>"+ feature.properties.Name)
-   		}
-		}).addTo(map);
-	 
-	 	//Geología
-	 	var litologias = L.geoJson(litologias, {
-		style:function(feature){
-		switch (feature.properties.Nombre){
-			case 'Flujos de Lava de El Pelado': return {color:'#fff714', fillOpacity: .5};
-			case 'Flujos de lava de Chichinautzin': return {color:'#9fd4d3', fillOpacity: .5};			
-			case 'Flujos de lava de Guespala': return {color:'#f5b3dd', fillOpacity: .5};
-			case 'Formación Tepoztlán': return {color:'#996202', fillOpacity: .5};
-			case 'Formación Morelos': return {color:'#049902', fillOpacity: .5};
-		}
-		},
-		onEachFeature: function( feature, layer ){
-      		layer.bindPopup( "<strong>" + "Litología:" + "</strong><br/>"+ feature.properties.Nombre)
    		}
 		}).addTo(map);
 
