@@ -94,17 +94,17 @@
 		}).addTo(map);
 
 	 	//Estaciones
-		var sitios = L.geoJson(sitios, {
-		style:function(feature){
-		switch (feature.properties.select){
-			case 1: return {color:'#ff0303'};
-			case 2: return {color:'#996202'};		
-		}
-		},
-		onEachFeature: function( feature, layer ){
-      		layer.bindPopup( "<strong>" + "Estación:" + "</strong><br/>"+ feature.properties.Name)
-   		}
-		}).addTo(map);
+	//	var sitios = L.geoJson(sitios, {
+	//	style:function(feature){
+	//	switch (feature.properties.select){
+	//		case 1: return {color:'#ff0303'};
+	//		case 2: return {color:'#996202'};		
+	//	}
+	//	},
+	//	onEachFeature: function( feature, layer ){
+      	////	layer.bindPopup( "<strong>" + "Estación:" + "</strong><br/>"+ feature.properties.Name)
+   	//	}
+	//	}).addTo(map);
 
  </script>
 </body>
