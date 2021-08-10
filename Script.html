@@ -113,16 +113,38 @@
 		}).addTo(map);
 
 	 	//Sketchfab
-	 	var sketchfab = L.geoJson(sketchfab, {
-		style:function(feature){
-		switch (feature.properties.Name){
-			case 'La Bomba': return {color:'#ff0303'};
+	 	//var sketchfab = L.geoJson(sketchfab, {
+		//style:function(feature){
+		//switch (feature.properties.Name){
+		//	case 'La Bomba': return {color:'#ff0303'};
+		//}
+		//},
+		///onEachFeature: function( feature, layer ){
+      		//layer.bindPopup( "<strong>" + "Modelo 3D:" + "</strong><br/>"+ feature.properties.Name)
+   		//}
+		//}).addTo(map);
+	 
+		var skf = [
+    		[19.113425, -99.195205]
+		];
+
+		var arregloDeMarcadores =[];
+	 	var skfIcon = L.icon({
+    		iconUrl: 'Icon/sketchfab.png',
+    		iconSize: [25, 25],
+    		iconAnchor: [25, 25],
+    		popupAnchor: [-3, -76],
+		});
+
+		for (var i=0; i < skf.length; i++) {
+  		  arregloDeMarcadores[i] = new L.marker(skf[i], {icon: skfIcon}).addTo(map);
 		}
-		},
-		onEachFeature: function( feature, layer ){
-      		layer.bindPopup( "<strong>" + "Modelo 3D:" + "</strong><br/>"+ feature.properties.Name)
-   		}
-		}).addTo(map);
+
+		var popupskf = L.popup({
+  		minWidth: 250
+		}).setContent('<a href="https://sketchfab.com/3d-models/muestra-pena-de-bernal-55603dbe91b3435bab6ffed6a36ac534">Da Click para visualizar Modelo 3D</a>')
+
+		arregloDeMarcadores[0].bindPopup(popupskf);
 	
  </script>
 </body>
