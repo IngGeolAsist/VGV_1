@@ -129,11 +129,12 @@
 		];
 
 		var arregloDeMarcadores =[];
+	 
 	 	var skfIcon = L.icon({
-    		iconUrl: 'Icon/sketchfab.png',
-    		iconSize: [25, 25],
-    		iconAnchor: [25, 25],
-    		popupAnchor: [-3, -76],
+    			iconUrl: 'Icon/sketchfab.png',
+    			iconSize: [25, 25],
+    			iconAnchor: [25, 25],
+    			popupAnchor: [-3, -76],
 		});
 
 		for (var i=0; i < skf.length; i++) {
@@ -141,11 +142,11 @@
 		}
 
 		var popupskf = L.popup({
-  		minWidth: 250
+  			minWidth: 250
 		}).setContent('<a href="https://sketchfab.com/3d-models/muestra-pena-de-bernal-55603dbe91b3435bab6ffed6a36ac534">Da Click para visualizar Modelo 3D</a>')
 
 		arregloDeMarcadores[0].bindPopup(popupskf);
-	
+
  </script>
 </body>
 </html>
