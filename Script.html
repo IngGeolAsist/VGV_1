@@ -98,11 +98,10 @@
 			case 'Formación Tepoztlán': return {color:'#ff0303'};
 			case 'Formación Morelos': return {color:'#ff0303'};
 			case 'Formación Tepoztlán': return {color:'#ff03031'}; 
-			case 'Track 7 Tlayacapan - Laureles': return {color:'#ff0303'};	
 		}
 		},
 		onEachFeature: function( feature, layer ){
-      		layer.bindPopup( "<strong>" + "Track:" + "</strong><br/>"+ feature.properties.Name)
+      		layer.bindPopup( "<strong>" + "Litología:" + "</strong><br/>"+ feature.properties.Nombre)
    		}
 		}).addTo(map);
 				
