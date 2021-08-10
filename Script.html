@@ -105,6 +105,16 @@
       		layer.bindPopup( "<strong>" + "Estación:" + "</strong><br/>"+ feature.properties.Name)
    		}
 		}).addTo(map);
+	 
+		//Sketchfab
+		var sketchfab = L.geoJson(sketchfab, {
+		style:function(feature);		
+		}
+		},
+		onEachFeature: function( feature, layer ){
+      		layer.bindPopup( "<strong>" + "Modelo 3D:" + "</strong><br/>"+ feature.properties.Name)
+   		}
+		}).addTo(map);
 
 		//L.marker([-99.184711672447506, 19.3314277647846]).addTo(map).bindPopup("Inicio");
 		//L.marker([-99.195031329585177, 19.111837653820984]).addTo(map).bindPopup("La Cima II");
