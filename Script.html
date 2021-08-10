@@ -9,7 +9,7 @@
   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
   crossorigin=""></script>
 	<script type="text/javascript" src="Litologias.js"></script>
-	<script type="text/javascript" src="Sitios.js"></script>
+	<script type="text/javascript" src="sitios.js"></script>
 	<script type="text/javascript" src="trayectos.js"></script>
   <style>
 	#mapDIV {
@@ -67,6 +67,18 @@
 			case 'Track 5 Caminata': return {color:'#ff0303'};
 			case 'Track 6 El Sombrero (Tlayacapan)': return {color:'#ff03031'}; 
 			case 'Track 7 Tlayacapan - Laureles': return {color:'#ff0303'};			
+		}
+		},
+		onEachFeature: function( feature, layer ){
+      		layer.bindPopup( "<strong>" + "Track:" + "</strong><br/>"+ feature.properties.Name)
+   		}
+		}).addTo(map);
+	 
+		var sitios = L.geoJson(sitios, {
+		style:function(feature){
+		switch (feature.properties.select){
+			case '1': return {color:'#ff0303'};
+			case '2': return {color:'#ff0303'};		
 		}
 		},
 		onEachFeature: function( feature, layer ){
