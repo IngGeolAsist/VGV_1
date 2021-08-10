@@ -97,8 +97,14 @@
 	 	var sitios = L.geoJson(sitios, {
 		style:function(feature){
 		switch (feature.properties.select){
-			case 1: return {color:'#ff0303'};
-			case 2: return {color:'#996202'};		
+			case 'Inicio': return {color:'#ff0303'};
+			case 'La Cima II': return {color:'#996202'};
+			case 'San Andrés de la Cal': return {color:'#ff0303'};
+			case 'Tepozteco': return {color:'#996202'};
+			case 'La Cañada 1': return {color:'#ff0303'};
+			case 'La Cañada 2': return {color:'#996202'};
+			case 'Cerro del Sombrero': return {color:'#ff0303'};
+			case 'Banco de materiales': return {color:'#996202'};
 		}
 		},
 		onEachFeature: function( feature, layer ){
