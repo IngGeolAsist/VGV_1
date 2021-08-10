@@ -4,7 +4,6 @@ var sitios = {
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "Name": "Inicio", "id": 1, "select":1 }, "geometry": { "type": "Point", "coordinates": [ -99.184711672447506, 19.3314277647846 ] } },
-{ "type": "Feature", "properties": { "Name": "La Cima II", "id": 2, "select":2 }, "geometry": { "type": "Point", "coordinates": [ -99.195031329585177, 19.111837653820984 ] } },
 { "type": "Feature", "properties": { "Name": "San Andrés de la Cal", "id": 3, "select":2 }, "geometry": { "type": "Point", "coordinates": [ -99.114247164302256, 18.963457634136457 ] } },
 { "type": "Feature", "properties": { "Name": "Tepozteco", "id": 4, "select":2 }, "geometry": { "type": "Point", "coordinates": [ -99.10154221358529, 19.000839870919663 ] } },
 { "type": "Feature", "properties": { "Name": "La Cañada 1", "id": 5, "select":2 }, "geometry": { "type": "Point", "coordinates": [ -98.961348239825682, 18.9918236290337 ] } },
