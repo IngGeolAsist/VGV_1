@@ -26,6 +26,10 @@
 		zoom:11
 		});
 		
+	 
+	  	var ggeology = L.geoJson(geology, {
+		}).addTo(map);
+	 
 		var scale = L.control.scale({
 		'imperial':false
 		});
