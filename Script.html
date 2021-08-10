@@ -97,8 +97,8 @@
 		var sitios = L.geoJson(sitios, {
 		style:function(feature){
 		switch (feature.properties.select){
-			case 1: return {iconUrl: 'logo_rojo.png'};
-			case 2: return {iconUrl: 'logo_verde.png'};		
+			case 1: return {color:'#ff0303'};
+			case 2: return {color:'#996202'};		
 		}
 		},
 		onEachFeature: function( feature, layer ){
