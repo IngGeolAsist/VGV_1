@@ -1,6 +1,6 @@
 var sitios = {
 "type": "FeatureCollection",
-"name": "Sitios",
+"name": "sitios",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "Name": "Inicio", "id": 1, "select":1 }, "geometry": { "type": "Point", "coordinates": [ -99.184711672447506, 19.3314277647846 ] } },
